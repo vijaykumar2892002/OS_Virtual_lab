@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Aclonica', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Add styles for the imported font if needed */
+
+.Main-bar {
+    height: 17vh;
+    width: 100%;
+    background-color: #6adede;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Website-Logo img {
+    height: 20vh;
+    width: auto;
+}
+
+.Website-title {
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Oswald', sans-serif;
+    color: blue;
+}
+
+.Title {
+    text-align: center;
+    font-size: xx-large;
+    color: red;
+}
+
+.College-logo img {
+    height: 15vh;
+    width: auto;
+}
+
+@media (max-width: 1000px) {
+    /* Adjusted styles for smaller screens */
+    .Main-bar {
+        width: 100%;
+        height: fit-content;
+        padding-right: 1%;
+        overflow-x: auto;
+    }
+
+    .Title {
+        font-size: x-large;
+    }
+
+    .PICT_NAME {
+        font-size: large;
+    }
+
+    .Website-Logo {
+        margin: 0;
+    }
+
+    .College-logo {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    /* Adjusted styles for even smaller screens */
+    .Main-bar {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .Title {
+        font-size: large;
+    }
+
+    .PICT_NAME {
+        font-size: large;
+    }
+}

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+
+    font-family: 'Roboto', sans-serif;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+}
+
+th {
+    background-color: rgb(208, 228, 254);
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    font-size: x-large;
+    margin-bottom: 1rem;
+
+}
+
+td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    font-size: large;
+
+}
+
+.pdf-image {
+
+    height: 2rem;
+    width: 2rem;
+    border-radius: 20%;
+    border: 5px solid #e6e7e8;
+
+}
+
+tr:nth-child(even) {
+    background-color: rgb(208, 228, 254);
+
+}
+
+tr:nth-child(odd) {
+    background-color: #c0d4f7;
+
+}
+
+td:hover {
+    color: #f5f6f7;
+    cursor: pointer;
+
+}
+
+tr:hover td {
+
+    cursor: pointer;
+    background-color: #a9b7de;
+}
+
+.action-main {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Delete-icons {
+    font-size: x-large;
+    color: red;
+
+}
+
+.Delete-icons:hover {
+    color: rgb(11, 12, 12);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.header_fixed {
+    max-height: 100vh;
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #dddddd;
+}
+
+.header_fixed thead th {
+    position: sticky;
+    top: 0;
+}
+.video{
+    color: red;
+}

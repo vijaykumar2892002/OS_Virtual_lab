@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "jost", sans-serif;
+}
+
+.form-main {
+    background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg");
+    width:100%;
+    height:100%; 
+    border:5px solid red;
+    box-sizing:border-box;
+    background-color: aqua;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-main h2 {
+    font-weight: bolder;
+    color: rgb(234, 8, 61);
+}
+.star{
+    color: rgb(180, 21, 21);
+    background-color: transparent;
+  }
+.form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    margin-bottom: 1%;
+    border: 1.5px solid #ccc;
+    border-radius: 3%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form select {
+    margin-left: 4%;
+    margin-bottom: 5%;
+    padding: 0.8% 1.2%;
+}
+
+.form select option {
+    padding: 2%;
+}
+
+label {
+    font-size: large;
+    font-weight: bolder;
+    color: aliceblue;
+}
+
+.form input {
+    margin-left: 7%;
+    margin-bottom: 5%;
+    padding: 0.5%;
+}
+
+.row_input {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.choose-file {
+    
+   
+}
+
+.file {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+.submit{
+    width: 60%;
+    padding: 1%;
+    border-radius: 3%;
+    background-color: rgb(210, 220, 22);
+}
+.delete-button:hover{
+    background-color: red;
+}
+.deletee-button:hover{
+    background-color: red;
+}
+.Dashborad{
+     background-color: rgb(219, 55, 37);
+     color: white;
+    padding: 6% 20%;
+    border-color: aliceblue;
+    margin-bottom: 8%;
+}
+.Dashborad:hover{
+    background-color: green;
+}
+.app{
+    width: 100%;
+    display: flex;
+   
+    justify-content:space-evenly;
+    gap: 5%;
+    margin-bottom: 4%;
+}
+
+.add-button{
+    text-align: center;
+     width: max-content;
+     height: max-content;
+    border-radius: 15%;
+     padding: 3% 5%;
+    
+    color:white;
+    background-color: darkblue;
+}
+.delete-button{
+    width: max-content;
+    height: max-content;
+    text-align: center;
+    border-radius: 12%;
+    padding: 3% 5%;
+    color: aliceblue;
+    background-color: rgb(211, 78, 82);
+}
+.add-button:hover{
+    background-color:rgb(5, 80, 12) ;
+    color: aliceblue;
+}
+.submit:hover{
+    background-color:rgb(5, 80, 12) ;
+    color: aliceblue;
+}
+.editor{
+    margin-top: 4%;
+}
+.file-not-chosen {
+    color: rgb(233, 241, 240); /* Change this to your desired text color */
+    font-weight: bold;
+  }
+  
+  .file-chosen {
+    color: green; /* Change this to your desired text color */
+    font-weight: bold;
+  }
+  .addd-button{
+    
+    border-radius: 15%;
+    height: fit-content;
+    padding: 1.5% 3% ;
+    
+    color:white;
+    background-color: darkblue;
+}
+.deletee-button{
+    border-radius: 12%;
+    height: fit-content;
+    padding: 1.5% 3% ;
+    color: aliceblue;
+    background-color: rgb(211, 78, 82);
+}
+.addd-button:hover{
+    background-color:rgb(5, 80, 12) ;
+    color: aliceblue;
+}
+.add-delete-main{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+}
+@media screen and (max-width: 990px)  {
+    
+    .form {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 730px)  {
+    
+    .form {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 620px)  {
+    
+    .form {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 538px)  {
+    
+    .form {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 480px)  {
+    
+    .form {
+        width: 99%;
+    }
+}
+@media screen and (max-width: 428px)  {
+    
+    .form {
+        width: 100%;
+    }
+    .row_input {
+        width: 100%;
+        flex: none;
+        
+      
+    }
+    .app{
+       
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        gap: 5%;
+        margin-bottom: 4%;
+    }
+    .add-button{
+    
+        border-radius: 1%;
+        padding:  0 5%;
+        padding-top: 0%;
+        color:white;
+        background-color: darkblue;
+    }
+    .delete-button{
+        border-radius: 1%;
+    }
+}

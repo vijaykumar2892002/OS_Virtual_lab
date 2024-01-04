@@ -1,0 +1,32 @@
+.pdf-container {
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+.wrap {
+    margin: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.controls button {
+    padding: 1rem 2rem;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    margin-right: 2rem;
+    outline: none;
+    border: none;
+    box-shadow: 1px 2px 5px black;
+}
+
+@media print {
+    .pdf-container {
+        display: none;
+    }
+}

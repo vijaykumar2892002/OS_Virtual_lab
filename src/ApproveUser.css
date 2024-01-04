@@ -1,0 +1,98 @@
+/* .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; 
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666; 
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff; 
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3; 
+  }
+  
+  .message {
+    font-size: 16px;
+    color: #ff0000; 
+  } */
+
+  @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "jost", sans-serif;
+}
+  
+  
+  .button-approve{
+    border-radius: 0.7rem;
+    text-align: center;
+    margin-top: 10%;
+   padding: 0.4rem 2rem;
+   border-style: none;
+    background-color: rgb(99, 128, 169);
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+  .button-approve::before {
+    content:"";
+    position: absolute;
+    background-color: rgb(29, 226, 12);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s;
+    border-radius: 0.7rem;
+   }
+   .button-approve:hover::before{
+    transform: scaleX(1);
+  }
+  .user-approval{
+    background-color: rgb(221, 228, 237);
+    width: 100vw;
+    height: 100Vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  } 
+  .user-app{
+    width: 40%;
+    height: 60%;
+    background-color: rgb(178, 205, 249);
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
+  }
+  @media (max-width: 500px) {
+    .user-app {
+      width: 100%;
+    }
+  }

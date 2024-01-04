@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+ 
+  
+  .user-profile {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  .button-main{
+  width: 100%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 5%;
+    align-items: center;
+    height: 4rem;
+  }
+
+  .add-content{
+    border-radius: 0.7rem;
+    text-align: center;
+    
+   padding: 0.4rem 1rem;
+   border-style: none;
+    background-color: rgb(99, 128, 169);
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.add-content::before {
+ content:"";
+ position: absolute;
+ background-color: rgb(13, 13, 13);
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ z-index: -1;
+ transform: scaleX(0);
+ transform-origin: left;
+ transition: all 0.5s;
+ border-radius: 0.7rem;
+ 
+
+}
+.add-content:hover::before{
+  transform: scaleX(1);
+}
+.admin-panel{
+text-align: center;
+color: blue;
+font-weight: bolder;
+}
+.section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8%;
+;
+}
+.profil-img{
+  width: 100%;
+}
+  

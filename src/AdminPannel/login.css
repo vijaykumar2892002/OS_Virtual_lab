@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+/* MAIN BODY  */
+.lala{
+  background-color: grey;
+  padding: 0% 7%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg{
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #6adede;
+    width: 100%;
+    height: 90%
+}
+
+.login-first-div {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* LEFT SIDE  */
+.left-side{
+  background-color: #6adede;
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    margin-left: 0%;
+  }
+  .left-main {
+    width: 55%;
+    height: 80%;
+    background-color: #6adede;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25%;
+    border-radius:10px 0px 0px 10px ;
+}
+.left-main img{
+  width: 80%;
+}
+.MAIN_LOGO{
+    width: 200px;
+}
+
+
+
+
+/* RIGHT SIDE  */
+.right-side{
+    background-color: white;
+    width: 100%;
+  }
+  .login-main {
+    /* z-index: 1; */
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 3500px;
+    height: 80vh;
+    background-color: white;
+    padding: 1% 1%;
+    box-shadow: 0px 0px 10px white;
+    border-radius: 0px 10px 10px 0px;
+    overflow-y: auto;
+    
+}
+.text-login{
+    text-align: center;
+    color: black;
+    font-size:x-large;
+    margin: 10% 0% 5% 0%;
+    background-color: white;
+    font-family: 'Roboto Slab', serif;
+
+}
+.label1 {
+  display: block;
+  margin: 2% 1%;
+  margin-left: 7%;
+  font-weight: 500;
+    background-color: white;
+    display: flex;
+  flex-direction: column;
+}
+.email-id{
+  color: black;
+  margin-left: 8%;
+    background-color: white;
+}
+
+.email-input {
+  background-color: white;
+  border-radius: 10px;
+  border-color: rgb(160, 159, 159);
+  color: rgb(6, 6, 6);
+  width: 90%; 
+  max-width: 360px;
+  padding: 1% 2% ;
+  margin-left: 5%;
+  margin-top: 1%;
+}
+
+.signup {
+    margin-top: 5%;
+    padding: 2% 4%;
+    background-color: #6adede;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+
+/* ... your other CSS styles */
+
+.signup-link{
+  color: rgb(14, 14, 14);
+    /* margin-left: 10%; */
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-right: 15%; */
+  }
+  .signup-button{
+    color: #007bff;
+    cursor: pointer;
+  }
+  .forget-password{
+    color: #007bff;
+    cursor: pointer;
+    text-align: end;
+    padding-right: 33%;
+  }
+  .error-message {
+    font-size: 80%;
+    color: #d41812;
+    background-color: white;
+    margin-left: 8%;
+  }
+
+  .star{
+    background-color: white;
+  }
+
+
+
+
+  
+  
+@media (max-width: 1000px) {
+
+  .lala{
+    padding: 0% 0%;
+  }
+  .left-side{
+    display: none;
+    width: 10%;
+  }
+  .login-first-div{
+    border-radius: 0%;
+    background-color: #6adede;
+  }
+  .right-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6adede;
+  }
+  /* img{
+    display: none;
+  } */
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* /* .Login_container {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ea0e0e;
+    display: flex;
+    flex-direction: column;
+  }
+  /* .login-main{
+    background-color: black;
+    height: max-content;
+  } 
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    
+    input {
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    p {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+    
+    span {
+      color: #007bff;
+      cursor: pointer;
+    } 
+    */
