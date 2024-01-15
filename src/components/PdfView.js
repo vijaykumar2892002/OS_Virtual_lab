@@ -51,7 +51,7 @@ const PdfView = () => {
                 onContextMenu={(e) => e.preventDefault()}
                 className="pdf-container"
             >
-                <Page pageNumber={pageNumber} />
+                <Page pageNumber={pageNumber}  className="page-main"/>
             </Document>
         </div>
     );

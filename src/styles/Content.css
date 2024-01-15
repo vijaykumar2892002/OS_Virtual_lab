@@ -7,7 +7,7 @@
 }
 
 .Background{
-    background-color:#6adede ;
+    background-color: rgb(134, 161, 195);
 }
 .Page{
     margin: 0% 7% 0% 7%;
@@ -118,7 +118,7 @@
                     margin: 2%;
                     display: flex;
                     justify-content: center;
-                    /* height: 110vh; */
+                    /* height: 100%; */
                     /* margin-top: 2%; */
                     margin-bottom: 2%;
                     padding-bottom: 1%;
@@ -135,8 +135,10 @@
                 /* MAIN TABLE  */
                 .main-content{
                     /* background-color: #6adede; */
+                    margin-bottom: 1%;
                     margin-inline: 1%;
                     width: 100%;
+                    
                     /* overflow-y: auto;
                     overflow-x: hidden; */
                     display: flex;
@@ -220,12 +222,18 @@
                     overflow-x: auto;
                 }
                 .textbody{
+                    width: 100%;
                     display: flex;
-                    align-items: center;
                     justify-content: center;
+                    gap: 1%;
+                    /* background-color: #F75990; */
+                    /* display: flex;
+                    align-items: center;
+                    justify-content: space-; */
                     font-size: large;
-                    margin: 2% 0%;
+                    margin: 1% 0%;
                 }
+               
                 .textbody img{
                     height: auto;
                     width: 2%;
@@ -282,6 +290,12 @@
                     width: 10%;
                     margin: 0 4%;
                     margin-left: 0%;
+                }
+                .go-to{
+                    align-items: center;
+                    border: none;
+                    color: blue;
+                    margin-bottom: 1%;
                 }
 
 

@@ -1,15 +1,17 @@
 import axios from 'axios';
 import { useFormik } from 'formik';
-import React from 'react';
+import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import * as Yup from 'yup';
 import './login.css';
+import PasswordToggle from "./PasswordToggle";
 
 const Login = () => {
   const navigate = useNavigate();
   const signup = () => navigate('/Register');
+  const [showpassword, setshowpassword] = useState(false);
   
   const validationSchema = Yup.object({
     email: Yup.string().email('Invalid email address').required('Email is required'),
@@ -96,27 +98,29 @@ const Login = () => {
                 {formik.touched.email && formik.errors.email && <p className='error-message'>{formik.errors.email}</p>}
               </label>
               
-              <div>
-                <label className='label1' >   
-                    <div className='email-id'>
-                      Password <sup className='star'>*</sup>
-                    </div>
-                  
-                    <input
-                      required
-                      className='email-input'
-                      type='password'
-                      {...formik.getFieldProps('password')}
-                      placeholder='Enter the password'
-                      />
-                    {formik.touched.password && formik.errors.password && (
-                      <p className='error-message'>{formik.errors.password}</p>
-                      )}
-                </label>
+      <label className='label1 password-main'>
+      <div className='email-id'>
+        Password <sup className='star'>*</sup>
+      </div>
+  
+        <input
+          required
+          className='email-input'
+          type={showpassword ? 'text' : 'password'}
+          {...formik.getFieldProps('password')}
+          placeholder='Enter the password'
+        />
+        <PasswordToggle showpassword={showpassword} setshowpassword={setshowpassword} /> {/* Use the PasswordToggle component here */}
+        {formik.touched.password && formik.errors.password && (
+          <p className='error-message'>{formik.errors.password}</p>
+        )}
+    
+      {/* ... (rest of the component) */}
+    </label>
                 <div className='forget-password'>
                 <span onClick={handleForgotPassword}>Forgot Password?</span>
               </div>
-              </div>
+              
               <div className='signup-link'>
                 <button type='submit' className='signup'>
                   SIGN IN

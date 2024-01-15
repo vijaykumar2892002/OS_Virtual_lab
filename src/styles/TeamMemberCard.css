@@ -33,7 +33,8 @@
     border: none;
      /* margin: 2rem ; */
      border-radius: 3rem;
-     width: 18rem;
+     width: 17rem;
+    
     
 }
 .team-member-card:hover{
@@ -69,32 +70,26 @@
 .social-icon:hover{
     color: #c42108;
 }
-
-@media (min-width:995px) and (max-width:1280px){
-    .mentor-div{
-  
-        padding-left: 9rem;
-    }
-
+.team-member-card{
+     margin: 2%;
 }
-
-@media (min-width:500px) and (max-width:600px){
-    .mentor-div{
-        padding-left: 6rem;
-    }
-    .team-div{
-        padding-left: 5rem;
-    }
-    
-    
-
-}
-
-@media (min-width:450px) and (max-width:500px){
-    .mentor-div{
-        padding-left: 5rem;
-    }
-    
-    
-
-}
+@media only screen and (max-width: 760px) {
+    .team-member-card{
+        margin-left: 20%;
+   }
+  }
+  @media only screen and (max-width: 500px) {
+    .team-member-card{
+        margin-left: 16%;
+   }
+  }
+  @media only screen and (max-width: 430px) {
+    .team-member-card{
+        margin-left: 8%;
+   }
+  }
+  @media only screen and (max-width: 360px) {
+    .team-member-card{
+        margin-left: 4%;
+   }
+  }

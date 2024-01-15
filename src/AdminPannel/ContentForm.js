@@ -135,35 +135,37 @@ function ContentForm() {
   const [videos, setVideos] = useState([]);
   const [editor, setEditor] = useState('');
   const [files, setFiles] = useState([]);
- 
+ const [link ,setlink]=useState('');
+ const [linkType,setlinkType]=useState('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if (!category || !['Assignments', 'Theory Topics', 'Interview questions', 'Recent trends'].includes(category)) {
-      alert('Please select a valid category.');
-      return;
-    }
+  if (!category || !['Assignments', 'Theory Topics', 'Interview questions', 'Books', 'Other Resources'].includes(category)) {
+    alert('Please select a valid category.');
+    return;
+  }
 
+  if (category === 'Books' || category === 'Other Resources') {
+    // Call the handlelinkSubmit function for Books or Other Resources category
+    await handleLinkSubmit(e);
+  } 
+  
+  else {
+    // Continue with the existing logic for other categories
     const formData = new FormData();
     formData.append('category', category);
     formData.append('title', title);
     formData.append('editor', editor);
-
-   //     // Append multiple videos as a comma-separated string
     formData.append('videos', videos.join(','));
 
-
-    // Append each file to the formData
     const filesArray = [...files];
-    
-       filesArray.forEach((file) => formData.append('files', file));
+    filesArray.forEach((file) => formData.append('files', file));
 
     try {
       const response = await axios.post('https://osl-backend.onrender.com/api/assignment/addContent', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
-      
 
       console.log(response);
 
@@ -175,15 +177,13 @@ function ContentForm() {
         });
 
         // Clear form fields by resetting the state
-         setCategory('');
-         setTitle('');
-         setVideos([]);
-         setEditor('');
-         setFiles([]);
-        
+        setCategory('');
+        setTitle('');
+        setVideos([]);
+        setEditor('');
+        setFiles([]);
       }
     } catch (error) {
-      // Handle errors here
       console.error('Error occurred while adding data:', error);
       Swal.fire({
         icon: 'error',
@@ -191,7 +191,47 @@ function ContentForm() {
         position: 'top-center',
       });
     }
+  }
+};
+
+
+
+const handleLinkSubmit = async (e) => {
+  e.preventDefault();
+
+  const formDataLinks = {
+    title,
+    link,
+    linkType,
   };
+
+  try {
+    const response = await axios.post('https://osl-backend.onrender.com/api/addLinks', formDataLinks);
+    
+    console.log(response);
+
+    if (response.data.message === 'Data Added successfully') {
+      Swal.fire({
+        icon: 'success',
+        title: 'Data Added Successfully',
+        position: 'top-center',
+      });
+
+      // Clear form fields by resetting the state
+      setTitle('');
+      setlink('');
+      setlinkType('');
+    }
+  } catch (error) {
+    console.error('Error occurred while adding data:', error);
+    Swal.fire({
+      icon: 'error',
+      title: 'Failed to add data. Please try again later.',
+      position: 'top-center',
+    });
+  }
+};
+
 
   const DashBoradHandler = () => {
     navigate('/AdminPanel/user-profile');
@@ -212,7 +252,8 @@ function ContentForm() {
             <option value='Assignments'>Assignments</option>
             <option value='Theory Topics'>Theory Topics</option>
             <option value='Interview questions'>Interview questions</option>
-            <option value='Recent trends'>Recent trends</option>
+            <option value='Books'>Books</option>
+            <option value='Other Resources'>Other Resources</option>
           </select>
         </div>
         <div className='row_input'>
@@ -232,19 +273,56 @@ function ContentForm() {
           </div>
         )}
 
-        <div className='row_input'>
-           <label>Video Links:</label>
-          <input
-               type="text"
-               placeholder="Enter video links separated by commas"
-               value={videos.join(',')}
-               onChange={(e) => setVideos(e.target.value.split(','))}
-           />
+<div className='row_input'>
+        {
+  category === 'Books' || category === 'Other Resources' ? (
+    <div className='link-video'>
+    <label htmlFor="">Links:</label>
+    <input
+  type="text"
+  placeholder='Enter the link'
+  value={link}
+  onChange={(e) => setlink(e.target.value)}
+  className='video-input'
+/>
+</div>
+  ) : (<div className='link-video'>
+    <label>Video Link:</label>
+    <input
+  type="text"
+  placeholder='Links separated by commas'
+  
+  value={videos.join(',')}
+  onChange={(e) => setVideos(e.target.value.split(','))}
+  className='video-input'
+  />
+  </div> )
+}
+
+
+ 
+
+
          </div>
-         <div className='row_input'>
-           <label>Notes (Files):</label>
-           <input type="file" accept="application/pdf" multiple onChange={(e) => setFiles(e.target.files)} />
-         </div>
+         {
+  category === 'Books' || category === 'Other Resources' ? (
+    <div className='row_input'>
+      <label> <p>Link Type:</p></label>
+      <select value={linkType} required onChange={(e) => setlinkType(e.target.value)}>
+      <option value=''>Select Type</option>
+      <option value='Books'>Books</option>
+      <option value='Other Resources'>Important Link</option>
+          </select>
+    
+  </div>) :(
+    <div className='row_input'>
+      <label>Notes (Files):</label>
+      <input type="file" accept="application/pdf" multiple onChange={(e) => setFiles(e.target.files)} />
+    </div>
+  ) 
+}
+
+
 
         <button className='submit' type='submit'>
           Submit

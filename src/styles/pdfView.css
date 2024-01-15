@@ -1,11 +1,13 @@
 .pdf-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     user-select: none;
+    overflow: auto;
 }
 
 .wrap {
-    margin: 20px;
+   
 }
 
 .controls {
@@ -28,5 +30,52 @@
 @media print {
     .pdf-container {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .page-main {
+        margin-left: 20%;
+    }
+
+}
+
+@media only screen and (max-width: 510px) {
+    .page-main {
+        margin-left: 30%;
+    }
+
+}
+
+@media only screen and (max-width: 475px) {
+    .page-main {
+        margin-left: 40%;
+    }
+
+}
+
+@media only screen and (max-width: 440px) {
+    .page-main {
+        margin-left: 50%;
+
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .page-main {
+        margin-left: 60%;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .page-main {
+        margin-left: 70%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .page-main {
+        margin-left: 80%;
     }
 }

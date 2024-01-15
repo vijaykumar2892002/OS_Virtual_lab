@@ -5,7 +5,10 @@ import Spinner from '../components/Spinner';
 import axios from 'axios';
 import Filter from '../components/Filter';
 import ContenttTable from './ContenttTable';
+import { useNavigate } from 'react-router-dom';
+
 const Contentt = () => {
+  const navigate = useNavigate();
   const [featuredata,setfeaturedata]=useState([]);
   const[loading,setloading]=useState(true);
   const [category,setcategory]=useState(filterData[0].title);
@@ -24,8 +27,14 @@ const Contentt = () => {
   useEffect(()=>{
     fetchdata();
   },[]);
+  
+  const DashBoradHandler = () => {
+    navigate('/AdminPanel/user-profile');
+  };
   return (
+    
     <>
+    
     <div className="main-content">
     
     <div>
@@ -40,6 +49,11 @@ const Contentt = () => {
     
     
     </div>
+    <div>
+          <button className='go-to' onClick={DashBoradHandler}>
+            Go to DashBoard
+          </button>
+        </div>
     
     </>
   )

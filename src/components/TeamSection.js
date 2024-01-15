@@ -5,7 +5,9 @@ import TeamMemberCard from './TeamMemberCard';
 import "../styles/TeamSection.css"
 
 const teamMentor = [
-  { name: 'Rachna Karnavat', role: 'Frontend Developer', image: 'rachna mam-modified.png', linkedin: 'https://www.linkedin.com/in/rachna-c-631a0916/',
+  { name: 'Rachna Karnavat', role: 'Teacher', image: 'rachna mam-modified.png', linkedin: 'https://www.linkedin.com/in/rachna-c-631a0916/',
+      instagram: '', },
+  { name: 'Dr. Shweta Dharmadhikari', role: 'Teacher', image: 'Swwetw_ photo-modified.png', linkedin: 'https://www.linkedin.com/in/shwetacd/',
       instagram: '', },
  
 ];
@@ -29,11 +31,13 @@ const TeamSection = () => {
   return (
     
     <> <div className="our-team"  sm={12} md={4}><h1>Our Team</h1></div>
-    <div className='Mentor'>
-      <Row className='mentor-div d-flex justify-content-center'>
+    <div className='team-section'>
+    <div className='row1'>
+    <Container > 
+      <Row className='d-flex justify-content-center'>
         {teamMentor.map((member, index) => (
-          <Col key={index} sm={12} md={6} className='mentor-card'>
-            <TeamMemberCard className="mentor-card"
+          <Col key={index} sm={12} md={4} lg={4}>
+            <TeamMemberCard 
               name={member.name}
               role={member.role}
               image={member.image}
@@ -43,8 +47,10 @@ const TeamSection = () => {
           </Col>
         ))}
       </Row>
-    </div>
-
+      </Container>
+      </div>
+    
+      <div className='row1'>
     <Container >
       <Row className='d-flex justify-content-center'>
         {teamMembers.map((member, index) => (
@@ -60,6 +66,8 @@ const TeamSection = () => {
         ))}
       </Row>
     </Container>
+    </div>
+    </div>
     </>
   );
 };
